@@ -18,7 +18,7 @@ echo-env:
 
 install:
 	@echo "=== Installing dependencies ==="
-	@go mod tidy && go mod vendor
+	@go mod tidy
 	@echo "Done"
 
 wire:
