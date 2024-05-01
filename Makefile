@@ -17,7 +17,8 @@ echo-env:
 	@echo ""
 
 install:
-	@echo "=== Installing dependencies ==="
+	@echo "=== Installing defining/dependencies ==="
+	@ export GOPATH="$HOME/go" && PATH="$GOPATH/bin:$PATH"
 	@go mod tidy
 	@echo "Done"
 
