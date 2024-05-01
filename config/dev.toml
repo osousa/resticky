@@ -1,0 +1,8 @@
+[server]
+    port = "9000"
+    proto = "localhost"
+    mode = "release"
+
+[connMan]
+    path = "/tmp/sqlite3"
+    dbs = [ "db.sqlite3", "db.sqlite3" ]

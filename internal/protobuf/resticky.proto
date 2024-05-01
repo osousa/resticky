@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package resticky;
+
+option go_package = "./resticky";
+
+message RestickyRequest {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+  string status = 4;
+  string timeout = 5;
+}
+
+message RestickyResponse {
+  bool success = 4;
+  string error = 3;
+  string name = 2;
+  string id = 1;
+}
+
+service RestickyService {
+  rpc LockAll (RestickyRequest) returns (RestickyResponse) {}
+  rpc UnlockAll (RestickyRequest) returns (RestickyResponse) {}
+}

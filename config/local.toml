@@ -1,0 +1,10 @@
+[connMan]
+    path            = "/tmp/sqlite3"
+    dbs             = [ "db1.sqlite3", "db2.sqlite3" ]
+    lockTimeout     = 300
+
+[server]
+    port        = "9000"
+    proto       = "localhost"
+    mode        = "release"
+
