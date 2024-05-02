@@ -32,10 +32,10 @@ endif
 		make install; \
 	fi
 	@echo "=== Running wire for ${app} ==="
-	echo $PATH	
-	echo $GOPATH
-	echo $HOME
-	ls $HOME/go/bin
+	@echo $PATH	
+	@echo $GOPATH
+	@echo $HOME
+	@ls $HOME/go/bin
 	@cd ./cmd/${app} && wire
 
 run-server:
