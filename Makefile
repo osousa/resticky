@@ -27,7 +27,7 @@ ifndef app
 endif
 	@if ! command -v wire >/dev/null 2>&1; then \
 		echo "Wire is not installed. Installing dependencies first." && \
-		go get -u github.com/google/wire/cmd/wire && \
+		go install -u github.com/google/wire/cmd/wire && \
 		make install; \
 	fi
 	@echo "=== Running wire for ${app} ==="
