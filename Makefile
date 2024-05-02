@@ -18,7 +18,7 @@ echo-env:
 
 install:
 	@echo "=== Installing defining/dependencies ==="
-	@export GOPATH="$HOME/go" && PATH="$GOPATH/bin:$PATH"
+	@export GOPATH="$$HOME/go" && PATH="$$GOPATH/bin:$$PATH"
 	@go mod tidy
 	@echo "Done"
 
@@ -32,10 +32,10 @@ endif
 		make install; \
 	fi
 	@echo "=== Running wire for ${app} ==="
-	@echo $PATH	
-	@echo $GOPATH
-	@echo $HOME
-	@ls $HOME/go/bin
+	@echo $$PATH	
+	@echo $$GOPATH
+	@echo $$HOME
+	@ls $$HOME/go/bin
 	@cd ./cmd/${app} && wire
 
 run-server:
