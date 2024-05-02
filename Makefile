@@ -34,7 +34,9 @@ endif
 	@echo $$PATH	
 	@echo $$GOPATH
 	@echo $$HOME
-	@ls /go/bin
+	@ls -la /go/bin
+	@ls -la /usr/local/go/bin
+	@find / -name wire
 	@cd ./cmd/${app} && wire
 
 run-server:
