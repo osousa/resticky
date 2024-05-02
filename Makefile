@@ -32,6 +32,7 @@ endif
 		make install; \
 	fi
 	@echo "=== Running wire for ${app} ==="
+	@ls /go/bin
 	@cd ./cmd/${app} && wire
 
 run-server:
